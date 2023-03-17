@@ -23,14 +23,18 @@ const Home = () => {
         <header>
           <Navbar Mode={Mode} changeMode={changeMode} textColor={textColor} />
         </header>
-        <main className={`${Mode ? `bg-${Mode}` : `bg-${Mode}`} px-4 py-4 font-poppins`}>
-          <Hero Mode={Mode} changeMode={changeMode} textColor={textColor} />
+        <main
+          className={`${
+            Mode ? `bg-${Mode}` : `bg-${Mode}`
+          } px-4 py-4 font-poppins`}
+        >
+          <Hero textColor={textColor} />
         </main>
         <section className="projects-dashboard h-[80vh]">
           <Project />
         </section>
-        <Connect className="font-poppins" />
-        <Contact className="font-poppins" />
+        <Connect />
+        <Contact />
       </div>
     </>
   );

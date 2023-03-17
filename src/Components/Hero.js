@@ -6,7 +6,7 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 
-const Hero = ({ changeMode, Mode, textColor }) => {
+const Hero = ({ textColor }) => {
   return (
     <>
       <div
