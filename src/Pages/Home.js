@@ -19,7 +19,7 @@ const Home = () => {
   };
   return (
     <>
-      <div className="Home-page">
+      <div className="Home-page scroll-smooth">
         <header>
           <Navbar Mode={Mode} changeMode={changeMode} textColor={textColor} />
         </header>
@@ -30,10 +30,10 @@ const Home = () => {
         >
           <Hero textColor={textColor} />
         </main>
-        <section className="projects-dashboard h-[80vh]">
+        <section className="projects-dashboard min-h-[100vh]">
           <Project />
         </section>
-        <Connect />
+        <Connect textColor={textColor} Mode={Mode} />
         <Contact />
       </div>
     </>

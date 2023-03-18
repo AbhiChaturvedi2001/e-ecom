@@ -1,6 +1,7 @@
 import React from "react";
 import { MdDarkMode } from "react-icons/md";
 import { BsSun } from "react-icons/bs";
+import myresume from "../Assets/abhi.pdf";
 
 const Navbar = ({ changeMode, Mode, textColor }) => {
   return (
@@ -34,7 +35,7 @@ const Navbar = ({ changeMode, Mode, textColor }) => {
           <li>
             <a
               className="font-poppins font-semibold bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 px-4 py-2 text-white cursor-pointer rounded-md ml-6 "
-              href="/"
+              href={myresume}
             >
               Resume
             </a>

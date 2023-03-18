@@ -8,11 +8,11 @@ import {
 const Contact = () => {
   return (
     <>
-    <div className='contact-container mt-2 bg-[#1f1f1f] px-3 py-3 text-white'>
-        <h1 className='text-center text-4xl'>Stay Connected </h1>
+    <div className='contact-container grid place-content-center h-[50vh] mt-2 bg-[#1f1f1f] px-3 py-3 text-white'>
+        <h1 className='text-center text-4xl font-poppins'>Stay Connected </h1>
         <div className='text-center mt-3' >Bharatpur , India</div>
-        <div className='text-center font-bold text-2xl'>chaturvedia435@gmail.com</div>
-        <div className='text-center'> (+91) 8005811245</div>
+        <div className='text-center font-bold text-xl font-poppins cursor-pointer'><a href='mailto:chaturvedia435@gmail.com'>chaturvedia435@gmail.com</a></div>
+        <div className='text-center mt-1'> (+91) 8005811245</div>
         <div
         className={`flex justify-center items-center mt-7`}
       >
