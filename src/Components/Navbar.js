@@ -17,7 +17,7 @@ const Navbar = ({ Mode, Toggle, showNavbar, changeMode }) => {
             Mode ? `text-white` : `text-black`
           } uppercase tracking-wider`}
         >
-          Developed By Abhi
+         <Link to='/'> Developed By Abhi</Link>
         </div>
         <div className="flex items-center justify-around s:w-[65%] md:w-[40%] w-[20%]">
           <button className="btn bg-orange-500 px-3 py-1 text-white font-normal ">
@@ -46,7 +46,7 @@ const Navbar = ({ Mode, Toggle, showNavbar, changeMode }) => {
         <ul
           className={`bg-gray-500 absolute top-0 duration-300 ease-in-out ${
             Toggle ? `left-0 w-[200px]` : `-left-40`
-          } flex flex-col items-center h-[100vh] `}
+          } flex flex-col items-center h-[100vh] z-10 `}
         >
           <li className="links">
             <Link to="/">Home</Link>

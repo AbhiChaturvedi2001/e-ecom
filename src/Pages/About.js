@@ -25,13 +25,13 @@ const About = ({ Toggle, Mode, showNavbar, changeMode }) => {
         <div className="mt-6 m-auto md:mt-6 md:w-[80%] w-[51%]">
           <div className="text-3xl font-concert">🤓 About Me</div>
           <div className="w-[100%] font-poppins font-medium">
-            I am a Full-Stack creative developer based in Barielly, India. I am
-            a Computer Science undergraduate from Chandigarh University and also
+            I am a FrontEnd creative developer based in Bharatpur, India. I am
+            a Bachelors of Computer Application(BCA) undergraduate from IMS NOIDA and also
             did some coursework in Designing and Visual Arts. I enjoy using my
             skill-set to empower people to accomplish their goals.<br/> <br /> My
             development stack is focused on converting ideas into sites & apps
-            that work. I create lighting fast WebApps and Websites using MERN
-            Stack with the help of NextJS.
+            that work. I create lighting fast WebApps UI and Websites Front end 
+            Stack with the help of React Js.
           </div>
         <div className="mt-4 font-concert">Want to know More About Me ? </div>
         <button className="px-2 py-1 mt-3 bg-orange-400 text-white ">Know More</button>
