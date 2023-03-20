@@ -1,47 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
+import { HiBars3BottomRight } from "react-icons/hi2";
 import { MdDarkMode } from "react-icons/md";
+import { Link } from "react-router-dom";
 import { BsSun } from "react-icons/bs";
-import myresume from "../Assets/abhi.pdf";
 
-const Navbar = ({ changeMode, Mode, textColor }) => {
+const Navbar = ({ Mode, Toggle, showNavbar, changeMode }) => {
   return (
     <>
       <nav
-        className={`Navbar flex justify-between px-4 min-h-[10vh] ${
-          Mode ? `bg-${Mode}` : `bg-${Mode}`
-        } items-center`}
+        className={`flex justify-between items-center ${
+          Mode ? `bg-black` : `bg-white`
+        } min-h-[12vh] px-14`}
       >
         <div
-          className={`uppercase font-bebas tracking-wider text-xl ${
-            textColor ? `text-${textColor}` : `text-${textColor}`
-          }`}
+          className={`sm:text-lg mt-3 font-concert text-2xl ${
+            Mode ? `text-white` : `text-black`
+          } uppercase tracking-wider`}
         >
-          Developed by Abhi
+          Developed By Abhi
         </div>
-        <ul className="nav-links flex items-center">
-          <li>
-            {Mode === "white" ? (
-              <MdDarkMode
-                onClick={changeMode}
-                className="text-2xl cursor-pointer"
-              />
-            ) : (
-              <BsSun
-                onClick={changeMode}
-                className="text-white text-2xl cursor-pointer"
-              />
-            )}
+        <div className="flex items-center justify-around sm:w-[45%] md:w-[30%] w-[20%]">
+          <button className="btn bg-orange-500 px-3 py-1 text-white font-normal ">
+            Resume
+          </button>
+          <HiBars3BottomRight
+            onClick={showNavbar}
+            className={`mt-3 text-3xl cursor-pointer ${
+              Mode ? `text-white` : `text-black`
+            } `}
+          />
+          {Mode ? (
+            <BsSun
+              onClick={changeMode}
+              className="mt-3 text-3xl cursor-pointer text-white"
+            />
+          ) : (
+            <MdDarkMode
+              onClick={changeMode}
+              className="mt-3 text-3xl cursor-pointer"
+            />
+          )}
+        </div>
+      </nav>
+      <div>
+        <ul
+          className={`bg-gray-500 absolute top-0 duration-300 ease-in-out ${
+            Toggle ? `left-0 w-[200px]` : `-left-40`
+          } flex flex-col items-center h-[100vh] `}
+        >
+          <li className="links">
+            <Link to="/">Home</Link>
           </li>
-          <li>
-            <a
-              className="font-poppins font-semibold bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 px-4 py-2 text-white cursor-pointer rounded-md ml-6 "
-              href={myresume}
-            >
-              Resume
-            </a>
+          <li className="links">
+            <Link to="/about">About</Link>
+          </li>
+          <li className="links">
+            <Link to="/project">Project</Link>
+          </li>
+          <li className="links">
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
-      </nav>
+      </div>
     </>
   );
 };

@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.links{
+    margin: 1rem 0rem;
+}
+.btn{
+    margin-top: 1rem;
+}

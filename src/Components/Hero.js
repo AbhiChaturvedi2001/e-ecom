@@ -1,51 +1,38 @@
-import React from "react";
-import {
-  AiFillLinkedin,
-  AiFillGithub,
-  AiFillTwitterCircle,
-  AiFillInstagram,
-} from "react-icons/ai";
+import React, { useState } from "react";
+import SocialMediaIcons from "./SocialMediaIcons";
+import { Link } from "react-router-dom";
 
-const Hero = ({ textColor }) => {
+const Hero = () => {
+  const [statement, setstatement] = useState("<code />");
   return (
     <>
-      <div
-        className={`hero-container  min-h-full max-sm:w-[90%] w-[65%] text-center mx-auto mt-10`}
-      >
-        <div
-          className={`font-bebas text-3xl tracking-widest ${
-            textColor ? `text-${textColor}` : `text-${textColor}`
-          }`}
-        >
-          Abhishek Chaturvedi
+      <div className="md:flex md:flex-col md:text-center hero-container flex justify-center items-center h-[65%]  mt-20">
+        <div>
+          <div className="font-concert">Hey, 👋🏻</div>
+          <div className=" md:text-5xl font-concert text-6xl mt-2">
+            Abhishek Chaturvedi
+          </div>
+          <div className=" md:text-xl font-concert mt-2 text-4xl">
+            I speak in {statement} so you don't have to
+          </div>
+          <div className=" md:text-sm mt-5 font-concert text-xl">
+            I'm your friendly neighborhood Full-Stack Developer.Helping people{" "}
+            <br /> turn their ideas into sites and apps that work.
+          </div>
+          <button className="mt-3 px-4 py-1 bg-slate-500  cursor-pointer text-white font-concert">
+           <Link to='/'> github</Link>
+          </button>
+          <button className="mt-3 px-4 py-1 bg-slate-500 ml-2  cursor-pointer text-white font-concert">
+            Check My work
+          </button>
         </div>
-        <div
-          className={`about mt-2 font-medium  ${
-            textColor ? `text-${textColor}` : `text-${textColor}`
-          }`}
-        >
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English. Many desktop .
-        </div>
+        <img
+          className="md:m-auto max-md:mt-4 ml-4 w-[420px]"
+          src="https://github.com/developedbyed/react-portofolio-with-tailwind/blob/main/public/dev-ed-wave.png?raw=true"
+          alt="dummy logo"
+        />
       </div>
-      <div
-        className={`flex justify-center items-center mt-7  ${
-          textColor ? `text-${textColor}` : `text-${textColor}`
-        }`}
-      >
-        <AiFillLinkedin className="text-5xl ml-4 cursor-pointer" />
-        <AiFillGithub className="text-5xl ml-4 cursor-pointer" />
-        <AiFillTwitterCircle className="text-5xl ml-4 cursor-pointer" />
-        <AiFillInstagram className="text-5xl ml-4 cursor-pointer" />
-      </div>
-      <img
-        className="w-[400px] mx-auto mt-5"
-        src="https://github.com/developedbyed/react-portofolio-with-tailwind/blob/main/public/dev-ed-wave.png?raw=true"
-        alt="3d logo"
-      ></img>
+      <SocialMediaIcons />
     </>
   );
 };
