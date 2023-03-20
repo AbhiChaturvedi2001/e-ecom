@@ -46,7 +46,7 @@ const Navbar = ({ Mode, Toggle, showNavbar, changeMode }) => {
         <ul
           className={`bg-gray-500 absolute top-0 duration-300 ease-in-out ${
             Toggle ? `left-0 w-[200px]` : `-left-40`
-          } flex flex-col items-center h-[100vh] z-10 `}
+          } flex flex-col items-center h-[100vh] z-10  font-concert text-white font-bold`}
         >
           <li className="links">
             <Link to="/">Home</Link>
