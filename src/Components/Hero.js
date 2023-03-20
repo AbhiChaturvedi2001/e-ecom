@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const [statement, setstatement] = useState("<code />");
   return (
     <>
@@ -20,7 +25,7 @@ const Hero = () => {
             <br /> turn their ideas into sites and apps that work.
           </div>
           <button className="mt-3 px-4 py-1 bg-slate-500  cursor-pointer text-white font-concert">
-           <Link to='/'> github</Link>
+            <Link to="/"> github</Link>
           </button>
           <button className="mt-3 px-4 py-1 bg-slate-500 ml-2  cursor-pointer text-white font-concert">
             Check My work
@@ -32,7 +37,7 @@ const Hero = () => {
           alt="dummy logo"
         />
       </div>
-      <SocialMediaIcons />
+      <SocialMediaIcons data-aos="fade-down" />
     </>
   );
 };

@@ -19,7 +19,7 @@ const Navbar = ({ Mode, Toggle, showNavbar, changeMode }) => {
         >
          <Link to='/'> Developed By Abhi</Link>
         </div>
-        <div className="flex items-center justify-around s:w-[65%] md:w-[40%] w-[20%]">
+        <div className="flex items-center justify-around s:w-[75%] md:w-[40%] w-[20%]">
           <button className="btn bg-orange-500 px-3 py-1 text-white font-normal ">
             Resume
           </button>
