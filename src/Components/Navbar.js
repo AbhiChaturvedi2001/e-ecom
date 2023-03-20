@@ -13,13 +13,13 @@ const Navbar = ({ Mode, Toggle, showNavbar, changeMode }) => {
         } min-h-[12vh] px-14`}
       >
         <div
-          className={`sm:text-lg mt-3 font-concert text-2xl ${
+          className={`s:text-xs sm:text-lg mt-3 font-concert text-2xl ${
             Mode ? `text-white` : `text-black`
           } uppercase tracking-wider`}
         >
           Developed By Abhi
         </div>
-        <div className="flex items-center justify-around sm:w-[50%] md:w-[40%] w-[20%]">
+        <div className="flex items-center justify-around s:w-[65%] md:w-[40%] w-[20%]">
           <button className="btn bg-orange-500 px-3 py-1 text-white font-normal ">
             Resume
           </button>

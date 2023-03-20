@@ -14,10 +14,8 @@ module.exports = {
       },
       screens: {
         'md': {'max': '1068px'},
-        // => @media (max-width: 767px) { ... }
-  
         'sm': {'max': '639px'},
-        // => @media (max-width: 639px) { ... }
+        's':{'max' : '490px'}
       }
     },
   },
