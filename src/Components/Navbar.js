@@ -19,7 +19,7 @@ const Navbar = ({ Mode, Toggle, showNavbar, changeMode }) => {
         >
           Developed By Abhi
         </div>
-        <div className="flex items-center justify-around sm:w-[45%] md:w-[30%] w-[20%]">
+        <div className="flex items-center justify-around sm:w-[50%] md:w-[40%] w-[20%]">
           <button className="btn bg-orange-500 px-3 py-1 text-white font-normal ">
             Resume
           </button>
