@@ -1,22 +1,18 @@
 import React,{useEffect} from "react";
-import Navbar from "../Components/Navbar";
 import SocialMediaIcons from "../Components/SocialMediaIcons";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const Contact = ({ Toggle, Mode, showNavbar, changeMode }) => {
+  // for loading the animation first time
   useEffect(() => {
     AOS.init();
   }, []);
   return (
     <>
       <div className={`h-[100vh] contact-page-container ${Mode ? `bg-black text-white` : `bg-white text-black`}`}>
-        <Navbar
-          Toggle={Toggle}
-          Mode={Mode}
-          showNavbar={showNavbar}
-          changeMode={changeMode}
-        />
+  
         <div className="relative text-center md:mt-[6rem] ">
           <h1
             className={`${Mode ? `heading-active` : `heading`} font-concert left-[35%] -z-4 md:text-7xl `}
@@ -29,8 +25,8 @@ const Contact = ({ Toggle, Mode, showNavbar, changeMode }) => {
             I'm available for freelance projects. Let's work together to create
             something worth sharing.
           </div>
-          <button className="bg-orange-700 px-3 w-[6rem] font-concert cursor-pointer text-white py-1 mt-5">Mail</button>
-          <button className="ml-2 bg-orange-700 px-3 py-1 w-[6rem] font-concert cursor-pointer text-white">Linkedin</button>
+          <button className="bg-orange-700 px-3 w-[6rem] font-concert cursor-pointer text-white py-1 mt-5"><Link to='mailto:chaturvedia435@gmail.com'>Mail</Link></button>
+          <button className="ml-2 bg-orange-700 px-3 py-1 w-[6rem] font-concert cursor-pointer text-white"><Link to='https://www.linkedin.com/in/abhishek1949/'>Linkedin</Link></button>
         </div>
         <SocialMediaIcons data-aos="fade-down" />
       </div>

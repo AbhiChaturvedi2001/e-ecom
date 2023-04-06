@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Navbar from "../Components/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import SocialMediaIcons from "../Components/SocialMediaIcons";
@@ -11,12 +10,6 @@ const About = ({ Toggle, Mode, showNavbar, changeMode }) => {
   return (
     <>
       <div className={`about-page-container ${Mode ? `bg-black text-white` : `bg-white text-black`}`}>
-        <Navbar
-          Toggle={Toggle}
-          Mode={Mode}
-          showNavbar={showNavbar}
-          changeMode={changeMode}
-        />
         <div className="relative text-center">
           <h1
             data-aos="fade-right"

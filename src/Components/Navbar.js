@@ -4,7 +4,7 @@ import { MdDarkMode } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { BsSun } from "react-icons/bs";
 
-const Navbar = ({ Mode, Toggle, showNavbar, changeMode }) => {
+const Navbar = ({ Mode, Toggle, showNavbar, changeMode, setToggle }) => {
   return (
     <>
       <nav
@@ -49,16 +49,16 @@ const Navbar = ({ Mode, Toggle, showNavbar, changeMode }) => {
           } flex flex-col items-center h-[100vh] z-10  font-concert text-white font-bold`}
         >
           <li className="links">
-            <Link to="/">Home</Link>
+            <Link onClick={() => setToggle(false)} to="/">Home</Link>
           </li>
           <li className="links">
-            <Link to="/about">About</Link>
+            <Link onClick={() => setToggle(false)} to="/about">About</Link>
           </li>
           <li className="links">
-            <Link to="/project">Project</Link>
+            <Link onClick={() => setToggle(false)} to="/project">Project</Link>
           </li>
           <li className="links">
-            <Link to="/contact">Contact</Link>
+            <Link onClick={() => setToggle(false)} to="/contact">Contact</Link>
           </li>
         </ul>
       </div>
